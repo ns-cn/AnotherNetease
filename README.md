@@ -1,5 +1,5 @@
-# AnotherNetease
-**AnotherNetease**: 一个SwiftUI的练手项目
+# Yu
+**网愈云**: 一个SwiftUI的练手项目
 
 **网愈云, 治愈你的心灵~**
 
