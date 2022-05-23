@@ -16,6 +16,7 @@ struct LeftPartView: View {
     @Binding var viewType: ContentViewType
     @Binding var isSideShow: Bool
     @Binding var songToDisplay: [Song]
+    var prop: Properties
     var body: some View {
         VStack{
             // 头
@@ -54,12 +55,13 @@ struct LeftPartView: View {
                             }
                         }
                         .onTapGesture {
-                            NSApplication.shared.terminate(0)
+//                            NSApplication.shared.terminate(0)
                         }
                 }
             }
         }
-        .frame(width: 220,alignment: .top)
+        .frame(width: (prop.isLandscape ? prop.size.width : prop.size.height)/4 > 300 ? 300 :
+                (prop.isLandscape ? prop.size.width : prop.size.height)/4)
     }
 }
 
@@ -160,7 +162,6 @@ struct GuideView: View {
                                 .fill(Color.gray.opacity(hoverSearch ? 0.5 : 0.3))
                         })
                         .cornerRadius(15)
-                        .focusable()
                         .frame(width: 42, height: 42)
                         .float(radius: 4, color1: .white.opacity(0.8))
                 }

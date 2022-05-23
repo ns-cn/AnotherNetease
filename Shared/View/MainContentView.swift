@@ -8,17 +8,22 @@
 import SwiftUI
 import AVFoundation
 
-struct ContentView: View {
-    @ObservedObject var datacenter: DataCenter = DataCenter()
-    @State var isSideShow: Bool = false
-    @State var audioPlayer: AVPlayer?
-    @State var player: AVAudioPlayer?
-    @State var progress: Double = 0
+struct MainContentView: View {
+    @EnvironmentObject var datacenter: DataCenter
+    @Binding var isSideShow: Bool
+    @Binding var audioPlayer: AVPlayer?
+//    @Binding var player: AVAudioPlayer?
+    @Binding var progress: Double
     // 播放器状态
-    @State var isPlaying: Bool = false
+    @Binding var isPlaying: Bool
+    
+    
+    @Binding var viewType: ContentViewType
+    @Binding var songToDisplay: [Song]
     var body: some View {
         ZStack (alignment: .trailing){
-            MainView(isSideShow: $isSideShow, progress: $progress, isPlaying:  $isPlaying, audioPlayer: $audioPlayer).environmentObject(datacenter)
+            MainView(isSideShow: $isSideShow, progress: $progress, isPlaying: $isPlaying, audioPlayer: $audioPlayer, viewType: $viewType, songToDisplay: $songToDisplay)
+                .environmentObject(datacenter)
                 .onAppear(){
                     
                 }
@@ -36,14 +41,12 @@ struct ContentView: View {
                 .padding(.bottom, 15)
                 .float()
         }
-        .frame(minWidth: 725,minHeight: 490)
+//        .frame(minWidth: 725,minHeight: 490)
     }
 }
 
 struct MainView: View{
     @EnvironmentObject var datacenter: DataCenter
-    @State var warn: Bool = false
-    @State var viewType: ContentViewType = .FAVORITE
 
     @Binding var isSideShow: Bool
     
@@ -51,13 +54,16 @@ struct MainView: View{
     // 播放器状态
     @Binding var isPlaying: Bool
     @Binding var audioPlayer: AVPlayer?
-    @State var songToDisplay: [Song] = []
+    
+//    @Binding var warn: Bool
+    @Binding var viewType: ContentViewType
+    @Binding var songToDisplay: [Song]
     
     var body: some View{
         HStack{
-            LeftPartView(viewType: $viewType, isSideShow: $isSideShow, songToDisplay: $songToDisplay)
-                .environmentObject(datacenter)
-            Divider()
+//            LeftPartView(viewType: $viewType, isSideShow: $isSideShow, songToDisplay: $songToDisplay, prop: <#Properties#>)
+//                .environmentObject(datacenter)
+//            Divider()
             VStack{
                 VStack{
                     switch self.viewType{
