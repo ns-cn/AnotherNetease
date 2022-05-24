@@ -15,6 +15,8 @@ struct SideView: View{
     @Binding var isPlaying: Bool
     @Binding var progress: Double
     @Binding var audioPlayer: AVPlayer?
+    
+    var prop: Properties
     var body: some View{
         HStack{
             ScrollView(showsIndicators: false){
@@ -104,14 +106,14 @@ struct SideView: View{
 //            Color.blue
 //        })
         .cornerRadius(8)
-        .frame(width: 320)
+        .frame(width: prop.size.width > 320 ? 320 : .infinity)
         .onTapGesture(perform: {
             withAnimation(.easeInOut) {
                 isSideShow = false
             }
         })
 //        .animation(.easeIn)
-        .offset(x: isSideShow ? 0 : 320, y: 0)
+        .offset(x: isSideShow ? 0 : 320)
     }
     
     
@@ -245,11 +247,5 @@ struct SideView: View{
                 }
             }.resume()
         }
-    }
-}
-
-struct SideView_Previews: PreviewProvider {
-    static var previews: some View {
-        SideView( isSideShow: .constant(true), isPlaying: .constant(false), progress: .constant(0), audioPlayer: .constant(nil))
     }
 }

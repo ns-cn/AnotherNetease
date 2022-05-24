@@ -16,8 +16,8 @@ struct ResponsiveView<Content: View>: View {
         GeometryReader{proxy in
             let size = proxy.size
             let isLandscape = (size.width > size.height)
-            let isPad = size.height >= 768
-            content(Properties(isLandscape: isLandscape, isPad: isPad, size: size))
+//            let isPad = size.height >= 768
+            content(Properties(isLandscape: isLandscape, size: size))
                 .frame(width: size.width, height: size.height, alignment: .center)
         }
     }
@@ -26,6 +26,6 @@ struct ResponsiveView<Content: View>: View {
 
 struct Properties{
     var isLandscape: Bool
-    var isPad: Bool
+//    var isPad: Bool
     var size: CGSize
 }

@@ -50,7 +50,7 @@ struct MusicDisplayView: View {
             }
             Spacer()
         }
-        .frame(minWidth: 480)
+//        .frame(minWidth: 480)
     }
 }
 

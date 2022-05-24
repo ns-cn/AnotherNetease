@@ -20,7 +20,7 @@ struct LeftPartView: View {
     var body: some View {
         VStack{
             // 头
-            LogoView(isSideShow: $isSideShow)
+            LogoView()
             // 网络
             GuideView(viewType: $viewType, isSideShow: $isSideShow, songToDisplay: $songToDisplay)
             
@@ -65,32 +65,19 @@ struct LeftPartView: View {
     }
 }
 
+
+
 struct LogoView: View {
     @State var hoverTitle: Bool = false
     
-    @Binding var isSideShow: Bool
+//    @Binding var isSideShow: Bool
     var body: some View {
         Group {
             ZStack{
                 HStack {
-                    Text("网")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .scaleEffect(hoverTitle ? 1.1 : 1)
-                        .rotation3DEffect(Angle(degrees: 30), axis: (x: 1, y: 1, z: 0))
-                        .rotationEffect(Angle(degrees: hoverTitle ? 25 : 0))
-                    Text("愈")
-                        .font(.system(size: 32))
-                        .fontWeight(.bold)
-                        .scaleEffect(hoverTitle ? 1.4 : 1.1)
-                        .rotation3DEffect(Angle(degrees: -30), axis: (x: 1, y: 1, z: 0))
-                        .rotationEffect(Angle(degrees: hoverTitle ? -25 : 0))
-                    Text("云")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .scaleEffect(hoverTitle ? 1.1 : 1)
-                        .rotation3DEffect(Angle(degrees: 30), axis: (x: 1, y: 1, z: 0))
-                        .rotationEffect(Angle(degrees: hoverTitle ? 25 : 0))
+                    LogoText(text: "网", degrees: 30)
+                    LogoText(text: "愈", degrees: -30)
+                    LogoText(text: "云", degrees: 30)
                 }
                 .foregroundColor(.white)
                 .float(color2: .green)
@@ -110,15 +97,62 @@ struct LogoView: View {
             .frame(maxHeight: 56)
         }
     }
+    
+    @ViewBuilder
+    func LogoText(text: String, degrees: Double) -> some View{
+        Text(text)
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .scaleEffect(hoverTitle ? 1.1 : 1)
+            .rotation3DEffect(Angle(degrees: degrees), axis: (x: 1, y: 1, z: 0))
+            .rotationEffect(Angle(degrees: hoverTitle ? degrees : 0))
+    }
 }
 
+
+
+struct MenuView: View{
+    
+    var imageName: String
+    var textDisplay: String
+    @State var hover: Bool = false
+    var body: some View{
+        HStack{
+            Image(systemName: imageName)
+                .resizable()
+                .frame(width: 24, height: 24)
+                .padding(.all, 15)
+                .foregroundColor(.red.opacity(0.5))
+                .float(radius: 15, color1: .white, color2: .gray)
+            Text(textDisplay)
+                .float()
+//                .scaleEffect(hover ? 1.3 : 0)
+            Spacer()
+        }
+        .background(content:{
+            Color.gray.opacity(hover ? 0.5 : 0.3)
+        })
+        .cornerRadius(15)
+        .padding(.all,2)
+        .padding(.horizontal, 5)
+        .float(radius: 15, color1: .white)
+        .onHover { hover in
+            self.hover = hover
+        }
+    }
+}
+
+
 struct GuideView: View {
+    
+    @EnvironmentObject var datacenter: DataCenter
     @State var hoverSearch: Bool = false
+    
+    
     
     @Binding var viewType: ContentViewType
     @Binding var isSideShow: Bool
     @Binding var songToDisplay: [Song]
-    @EnvironmentObject var datacenter: DataCenter
     var body: some View {
         VStack {
             // 网络
@@ -205,37 +239,6 @@ struct GuideView: View {
     }
 }
 
-
-struct MenuView: View{
-    
-    var imageName: String
-    var textDisplay: String
-    @State var hover: Bool = false
-    var body: some View{
-        HStack{
-            Image(systemName: imageName)
-                .resizable()
-                .frame(width: 24, height: 24)
-                .padding(.all, 15)
-                .foregroundColor(.red.opacity(0.5))
-                .float(radius: 15, color1: .white, color2: .gray)
-            Text(textDisplay)
-                .float()
-//                .scaleEffect(hover ? 1.3 : 0)
-            Spacer()
-        }
-        .background(content:{
-            Color.gray.opacity(hover ? 0.5 : 0.3)
-        })
-        .cornerRadius(15)
-        .padding(.all,2)
-        .padding(.horizontal, 5)
-        .float(radius: 15, color1: .white)
-        .onHover { hover in
-            self.hover = hover
-        }
-    }
-}
 
 
 struct Menu_Previews: PreviewProvider {

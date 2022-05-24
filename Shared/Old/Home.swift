@@ -23,6 +23,8 @@ struct Home: View {
     @State var viewType: ContentViewType = .FAVORITE
     
     @State var songToDisplay: [Song] = []
+    
+    var prop: Properties
     var body: some View {
         ResponsiveView{prop in
             HStack{
@@ -33,33 +35,11 @@ struct Home: View {
                         .padding(.bottom, 15)
                         .float()
                 }
-                MainContentView(isSideShow: $isSideShow, audioPlayer: $audioPlayer, progress: $progress, isPlaying: $isPlaying, viewType: $viewType, songToDisplay: $songToDisplay)
+                MainContentView(isSideShow: $isSideShow, audioPlayer: $audioPlayer, progress: $progress, isPlaying: $isPlaying, viewType: $viewType, songToDisplay: $songToDisplay, prop: prop)
                     .environmentObject(datacenter)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .overlay{
-//                ZStack(alignment: .leading){
-//                    if !prop.isLandscape{
-//                        Color.black
-//                            .opacity(0.25)
-//                            .ignoresSafeArea()
-//                            .onTapGesture {
-//                                withAnimation{
-//                                    showMenu.toggle()
-//                                }
-//                            }
-//                        SideBar(showMenu: $showMenu, prop: prop)
-//                            .offset(x: showMenu ? 0 : -300)
-//                    }
-//                }
-            }
         }
         .ignoresSafeArea(.container, edges: .leading)
-    }
-}
-
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
     }
 }

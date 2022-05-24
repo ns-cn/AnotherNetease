@@ -20,6 +20,9 @@ struct MainContentView: View {
     
     @Binding var viewType: ContentViewType
     @Binding var songToDisplay: [Song]
+    
+    
+    var prop: Properties
     var body: some View {
         ZStack (alignment: .trailing){
             MainView(isSideShow: $isSideShow, progress: $progress, isPlaying: $isPlaying, audioPlayer: $audioPlayer, viewType: $viewType, songToDisplay: $songToDisplay)
@@ -35,7 +38,7 @@ struct MainContentView: View {
                         }
                     }
             }
-            SideView(isSideShow: $isSideShow, isPlaying: $isPlaying, progress: $progress, audioPlayer: $audioPlayer)
+            SideView(isSideShow: $isSideShow, isPlaying: $isPlaying, progress: $progress, audioPlayer: $audioPlayer, prop: prop)
                 .environmentObject(datacenter)
                 .padding(.top, 15)
                 .padding(.bottom, 15)
