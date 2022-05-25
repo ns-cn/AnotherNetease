@@ -13,5 +13,9 @@ struct YuApp: App {
         WindowGroup {
             ContentView()
         }
+#if os(macOS)
+        .windowToolbarStyle(.unifiedCompact(showsTitle: false))
+        .windowStyle(.hiddenTitleBar)
+#endif
     }
 }

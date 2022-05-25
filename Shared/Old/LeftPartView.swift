@@ -67,47 +67,6 @@ struct LeftPartView: View {
 
 
 
-struct LogoView: View {
-    @State var hoverTitle: Bool = false
-    
-//    @Binding var isSideShow: Bool
-    var body: some View {
-        Group {
-            ZStack{
-                HStack {
-                    LogoText(text: "网", degrees: 30)
-                    LogoText(text: "愈", degrees: -30)
-                    LogoText(text: "云", degrees: 30)
-                }
-                .foregroundColor(.white)
-                .float(color2: .green)
-                .frame(maxWidth: .infinity, alignment: .center)
-                Text("by tangyujun.com")
-                    .font(.subheadline)
-                    .blur(radius: 0.4)
-                    .opacity(0.1)
-                    .frame(maxWidth: .infinity,maxHeight: .infinity, alignment: .bottomTrailing)
-                    .float()
-            }
-            .onHover(perform: { hover in
-                withAnimation(.easeInOut) {
-                    hoverTitle = hover
-                }
-            })
-            .frame(maxHeight: 56)
-        }
-    }
-    
-    @ViewBuilder
-    func LogoText(text: String, degrees: Double) -> some View{
-        Text(text)
-            .font(.largeTitle)
-            .fontWeight(.bold)
-            .scaleEffect(hoverTitle ? 1.1 : 1)
-            .rotation3DEffect(Angle(degrees: degrees), axis: (x: 1, y: 1, z: 0))
-            .rotationEffect(Angle(degrees: hoverTitle ? degrees : 0))
-    }
-}
 
 
 
@@ -203,7 +162,7 @@ struct GuideView: View {
                 MenuView(imageName: "thermometer.sun", textDisplay: "近期热门")
                     .onTapGesture {
                         withAnimation(.easeInOut) {
-                            viewType = .TPOARTIST
+                            viewType = .TOPARTIST
                             datacenter.getTopArtist()
                         }
                     }

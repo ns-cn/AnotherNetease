@@ -49,10 +49,24 @@
 		62104E8F283BC9FC006D068C /* MusicDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104E6A283BC9FC006D068C /* MusicDisplayView.swift */; };
 		62104E90283BC9FC006D068C /* ResponsiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104E6B283BC9FC006D068C /* ResponsiveView.swift */; };
 		62104E91283BC9FC006D068C /* ResponsiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104E6B283BC9FC006D068C /* ResponsiveView.swift */; };
-		62104E97283C6C1C006D068C /* YuSideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104E96283C6C1C006D068C /* YuSideBar.swift */; };
-		62104E98283C6C1C006D068C /* YuSideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104E96283C6C1C006D068C /* YuSideBar.swift */; };
+		62104E97283C6C1C006D068C /* YuGuideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104E96283C6C1C006D068C /* YuGuideBarView.swift */; };
+		62104E98283C6C1C006D068C /* YuGuideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104E96283C6C1C006D068C /* YuGuideBarView.swift */; };
 		62104E9F283D1478006D068C /* YuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104E9E283D1478006D068C /* YuData.swift */; };
 		62104EA0283D1478006D068C /* YuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104E9E283D1478006D068C /* YuData.swift */; };
+		62104EA3283D2018006D068C /* YuSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EA2283D2018006D068C /* YuSearchView.swift */; };
+		62104EA4283D2018006D068C /* YuSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EA2283D2018006D068C /* YuSearchView.swift */; };
+		62104EA6283D2050006D068C /* YuFraviteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EA5283D2050006D068C /* YuFraviteView.swift */; };
+		62104EA7283D2050006D068C /* YuFraviteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EA5283D2050006D068C /* YuFraviteView.swift */; };
+		62104EA9283D207B006D068C /* YuExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EA8283D207B006D068C /* YuExploreView.swift */; };
+		62104EAA283D207B006D068C /* YuExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EA8283D207B006D068C /* YuExploreView.swift */; };
+		62104EAD283DD04E006D068C /* YuViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EAC283DD04E006D068C /* YuViewType.swift */; };
+		62104EAE283DD04E006D068C /* YuViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EAC283DD04E006D068C /* YuViewType.swift */; };
+		62104EB1283DD924006D068C /* LocalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EB0283DD924006D068C /* LocalModel.swift */; };
+		62104EB2283DD924006D068C /* LocalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EB0283DD924006D068C /* LocalModel.swift */; };
+		62104EB6283DD987006D068C /* YuLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EB5283DD987006D068C /* YuLocalStorage.swift */; };
+		62104EB7283DD987006D068C /* YuLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EB5283DD987006D068C /* YuLocalStorage.swift */; };
+		62104EB9283DDC5C006D068C /* YuPlayerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EB8283DDC5C006D068C /* YuPlayerControl.swift */; };
+		62104EBA283DDC5D006D068C /* YuPlayerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EB8283DDC5C006D068C /* YuPlayerControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,8 +96,15 @@
 		62104E6B283BC9FC006D068C /* ResponsiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveView.swift; sourceTree = "<group>"; };
 		62104E92283BCD04006D068C /* Yu--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Yu--macOS--Info.plist"; sourceTree = "<group>"; };
 		62104E93283BCD34006D068C /* Yu--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Yu--iOS--Info.plist"; sourceTree = "<group>"; };
-		62104E96283C6C1C006D068C /* YuSideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuSideBar.swift; sourceTree = "<group>"; };
+		62104E96283C6C1C006D068C /* YuGuideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuGuideBarView.swift; sourceTree = "<group>"; };
 		62104E9E283D1478006D068C /* YuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuData.swift; sourceTree = "<group>"; };
+		62104EA2283D2018006D068C /* YuSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuSearchView.swift; sourceTree = "<group>"; };
+		62104EA5283D2050006D068C /* YuFraviteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuFraviteView.swift; sourceTree = "<group>"; };
+		62104EA8283D207B006D068C /* YuExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuExploreView.swift; sourceTree = "<group>"; };
+		62104EAC283DD04E006D068C /* YuViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuViewType.swift; sourceTree = "<group>"; };
+		62104EB0283DD924006D068C /* LocalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalModel.swift; sourceTree = "<group>"; };
+		62104EB5283DD987006D068C /* YuLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuLocalStorage.swift; sourceTree = "<group>"; };
+		62104EB8283DDC5C006D068C /* YuPlayerControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuPlayerControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +169,9 @@
 		62104E56283BC9FC006D068C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				62104EB4283DD94F006D068C /* Remote */,
+				62104EB3283DD944006D068C /* Player */,
+				62104EAF283DD8EA006D068C /* Local */,
 				62104E9D283D144A006D068C /* O */,
 				62104E9E283D1478006D068C /* YuData.swift */,
 			);
@@ -193,7 +217,8 @@
 		62104E95283C6BAC006D068C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				62104E96283C6C1C006D068C /* YuSideBar.swift */,
+				62104EA1283D1FF9006D068C /* Main */,
+				62104E96283C6C1C006D068C /* YuGuideBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +233,41 @@
 				62104E5C283BC9FC006D068C /* Search.swift */,
 			);
 			path = O;
+			sourceTree = "<group>";
+		};
+		62104EA1283D1FF9006D068C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				62104EA2283D2018006D068C /* YuSearchView.swift */,
+				62104EA5283D2050006D068C /* YuFraviteView.swift */,
+				62104EA8283D207B006D068C /* YuExploreView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		62104EAF283DD8EA006D068C /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				62104EAC283DD04E006D068C /* YuViewType.swift */,
+				62104EB0283DD924006D068C /* LocalModel.swift */,
+				62104EB5283DD987006D068C /* YuLocalStorage.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		62104EB3283DD944006D068C /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				62104EB8283DDC5C006D068C /* YuPlayerControl.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		62104EB4283DD94F006D068C /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,23 +371,30 @@
 				62104E86283BC9FC006D068C /* DownloadView.swift in Sources */,
 				62104E72283BC9FC006D068C /* Playing.swift in Sources */,
 				62104E78283BC9FC006D068C /* LeftPartView.swift in Sources */,
+				62104EA3283D2018006D068C /* YuSearchView.swift in Sources */,
+				62104EB1283DD924006D068C /* LocalModel.swift in Sources */,
 				62104E6C283BC9FC006D068C /* Top.swift in Sources */,
 				62104E7C283BC9FC006D068C /* Home.swift in Sources */,
 				62104E7E283BC9FC006D068C /* SearchView.swift in Sources */,
-				62104E97283C6C1C006D068C /* YuSideBar.swift in Sources */,
+				62104E97283C6C1C006D068C /* YuGuideBarView.swift in Sources */,
+				62104EB6283DD987006D068C /* YuLocalStorage.swift in Sources */,
 				62104E6E283BC9FC006D068C /* Lyrics.swift in Sources */,
+				62104EA9283D207B006D068C /* YuExploreView.swift in Sources */,
 				62104E74283BC9FC006D068C /* DataCenter.swift in Sources */,
 				62104E9F283D1478006D068C /* YuData.swift in Sources */,
 				62104E8C283BC9FC006D068C /* MainContentView.swift in Sources */,
 				62104E4A283BC9A3006D068C /* ContentView.swift in Sources */,
+				62104EAD283DD04E006D068C /* YuViewType.swift in Sources */,
 				62104E80283BC9FC006D068C /* FavoriteView.swift in Sources */,
 				62104E90283BC9FC006D068C /* ResponsiveView.swift in Sources */,
 				62104E88283BC9FC006D068C /* SideView.swift in Sources */,
+				62104EA6283D2050006D068C /* YuFraviteView.swift in Sources */,
 				62104E76283BC9FC006D068C /* Search.swift in Sources */,
 				62104E48283BC9A3006D068C /* YuApp.swift in Sources */,
 				62104E8E283BC9FC006D068C /* MusicDisplayView.swift in Sources */,
 				62104E7A283BC9FC006D068C /* PlayController.swift in Sources */,
 				62104E82283BC9FC006D068C /* WelcomeView.swift in Sources */,
+				62104EB9283DDC5C006D068C /* YuPlayerControl.swift in Sources */,
 				62104E8A283BC9FC006D068C /* SideBar.swift in Sources */,
 				62104E84283BC9FC006D068C /* TopArtistView.swift in Sources */,
 			);
@@ -340,23 +407,30 @@
 				62104E87283BC9FC006D068C /* DownloadView.swift in Sources */,
 				62104E73283BC9FC006D068C /* Playing.swift in Sources */,
 				62104E79283BC9FC006D068C /* LeftPartView.swift in Sources */,
+				62104EA4283D2018006D068C /* YuSearchView.swift in Sources */,
+				62104EB2283DD924006D068C /* LocalModel.swift in Sources */,
 				62104E6D283BC9FC006D068C /* Top.swift in Sources */,
 				62104E7D283BC9FC006D068C /* Home.swift in Sources */,
 				62104E7F283BC9FC006D068C /* SearchView.swift in Sources */,
-				62104E98283C6C1C006D068C /* YuSideBar.swift in Sources */,
+				62104E98283C6C1C006D068C /* YuGuideBarView.swift in Sources */,
+				62104EB7283DD987006D068C /* YuLocalStorage.swift in Sources */,
 				62104E6F283BC9FC006D068C /* Lyrics.swift in Sources */,
+				62104EAA283D207B006D068C /* YuExploreView.swift in Sources */,
 				62104E75283BC9FC006D068C /* DataCenter.swift in Sources */,
 				62104EA0283D1478006D068C /* YuData.swift in Sources */,
 				62104E8D283BC9FC006D068C /* MainContentView.swift in Sources */,
 				62104E4B283BC9A3006D068C /* ContentView.swift in Sources */,
+				62104EAE283DD04E006D068C /* YuViewType.swift in Sources */,
 				62104E81283BC9FC006D068C /* FavoriteView.swift in Sources */,
 				62104E91283BC9FC006D068C /* ResponsiveView.swift in Sources */,
 				62104E89283BC9FC006D068C /* SideView.swift in Sources */,
+				62104EA7283D2050006D068C /* YuFraviteView.swift in Sources */,
 				62104E77283BC9FC006D068C /* Search.swift in Sources */,
 				62104E49283BC9A3006D068C /* YuApp.swift in Sources */,
 				62104E8F283BC9FC006D068C /* MusicDisplayView.swift in Sources */,
 				62104E7B283BC9FC006D068C /* PlayController.swift in Sources */,
 				62104E83283BC9FC006D068C /* WelcomeView.swift in Sources */,
+				62104EBA283DDC5D006D068C /* YuPlayerControl.swift in Sources */,
 				62104E8B283BC9FC006D068C /* SideBar.swift in Sources */,
 				62104E85283BC9FC006D068C /* TopArtistView.swift in Sources */,
 			);

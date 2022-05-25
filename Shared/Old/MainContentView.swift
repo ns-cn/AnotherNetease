@@ -75,7 +75,7 @@ struct MainView: View{
                     case .SEARCH:
                         SearchView( audioPlayer: $audioPlayer,isPlaying: $isPlaying, progress: $progress)
                             .environmentObject(datacenter)
-                    case .TPOARTIST:
+                    case .TOPARTIST:
                         TopArtistView().environmentObject(datacenter)
                     case .DOWNLOAD:
                         DownloadView()
@@ -108,7 +108,7 @@ extension View {
 enum ContentViewType{
     case FAVORITE
     case SEARCH
-    case TPOARTIST
+    case TOPARTIST
     case DOWNLOAD
     case WELCOME
 }
