@@ -28,16 +28,24 @@ struct YuRemoteSearchSongResponse: Codable{
     var code: Int16         // 状态码
     var result: YuRemoteSearchSongResponseResult    // 结果集
 }
-
 struct YuRemoteSearchSongResponseResult: Codable{
     var songs: [YuRemoteSearchSongResponseResultSongs]
     var songCount: Int64
 }
+// 歌曲明细
 struct YuRemoteSearchSongResponseResultSongs: Codable{
     var id: Int64       // 歌曲id
     var name: String    // 歌曲名称
     var ar: [YuRemoteResponseArtist]    // 歌手
+    var al: YuRemoteSearchSongResponseResultSongAlbum?
 }
+// 专辑
+struct YuRemoteSearchSongResponseResultSongAlbum: Codable{
+    var id: Int64           // id
+    var name: String        // 专辑名称
+    var picUrl: String?      // 专辑封面
+}
+
 
 
 // MARK: [API] 歌手搜索
@@ -57,10 +65,10 @@ struct YuRemoteSearchArtitstResponse: Codable{
 }
 struct YuRemoteSearchArtistResponseResult: Codable{
     var artists: [YuRemoteResponseArtist]   // 结果集
-    func toArtists() -> [YuArtist]{     // 转换为本地的模型
+    func toLocal() -> [YuArtist]{     // 转换为本地的模型
         var localArtists:[YuArtist] = []
         for artist in artists{
-            localArtists.append(artist.toArtist())
+            localArtists.append(artist.toLocal())
         }
         return localArtists
     }

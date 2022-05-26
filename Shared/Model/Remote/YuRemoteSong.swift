@@ -42,7 +42,7 @@ extension YuData{
         var lyrics: [YuLyric] = []
         remoteJsonHandler(url: url, dataType: YuRemoteSongLyricResponse.self) { data, err in
             if let responseLyric = data?.lrc{
-                lyrics = responseLyric.toLyrics()
+                lyrics = responseLyric.toLocal()
             }
         }
         return lyrics
@@ -56,7 +56,7 @@ struct YuRemoteSongLyricResponse: Codable{
 // 远程歌曲歌词请求响应体歌词明细
 struct YuRemoteSongLyricResponseDetail: Codable{
     var lyric: String?
-    func toLyrics() -> [YuLyric]{
+    func toLocal() -> [YuLyric]{
         if (lyric != nil){
             if let lines = lyric?.components(separatedBy: ["\n"]){
                 var lyrics: [YuLyric] = []

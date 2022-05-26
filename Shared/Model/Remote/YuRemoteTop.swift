@@ -24,7 +24,7 @@ extension YuData {
         var localArtists: [YuArtist] = []
         remoteJsonHandler(url: url, dataType: YuRemoteTopArtistResponse.self) { data, err in
             if data != nil{
-                localArtists = data!.toArtists()
+                localArtists = data!.toLocal()
             }
         }
         return localArtists
@@ -36,10 +36,10 @@ struct YuRemoteTopArtistResponse: Codable{
     let code: Int64                         // 响应码
     let more: Bool                          // 是否还有更多
     let artists: [YuRemoteResponseArtist]   // 歌手
-    func toArtists() -> [YuArtist]{     // 转换为本地的模型
+    func toLocal() -> [YuArtist]{     // 转换为本地的模型
         var localArtists:[YuArtist] = []
         for artist in artists{
-            localArtists.append(artist.toArtist())
+            localArtists.append(artist.toLocal())
         }
         return localArtists
     }
@@ -52,7 +52,7 @@ extension YuData{
         var localArtists: [YuArtist] = []
         remoteJsonHandler(url: url, dataType: YuRemoteTopArtistResponse.self) { data, err in
             if data != nil{
-                localArtists = data!.toArtists()
+                localArtists = data!.toLocal()
             }
         }
         return localArtists

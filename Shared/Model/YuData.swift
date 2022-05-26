@@ -24,7 +24,7 @@ class YuData: ObservableObject{
     @Published var currentSource: YuSource?   // 当前正在播放歌曲的资源信息,
     @Published var currentSong: YuSong?       // 当前正在播放的歌曲信息
     @Published var lyrics: [Lyric] = []     // 歌词
-    @Published var loopType: Int = 1        // 0: 单曲循环, 1: 循环播放, 2: 随机播放
+    @Published var loopType: PlayLoopType = .NOPE        // 0: 单曲循环, 1: 循环播放, 2: 随机播放
     @Published var topLyric: String = ""        // 刚播放过的歌词
     @Published var currentLyric: String = ""    // 当前显示歌词
     @Published var bottomLyric: String = ""     // 底部歌词

@@ -51,18 +51,33 @@ extension YuData {
 }
 
 // MARK: [Model] 公共响应实体定义
+// 歌曲
+struct YuRemoteResponseSong: Codable{
+    var id: Int64           // id
+    var name: String        // 歌曲名称
+    var artists: [YuRemoteResponseArtist]   // 歌手
+    var album: YuRemoteResponseAlbum?       // 专辑
+    func toLocal() -> YuSong{
+        YuSong(id: id, name: name, artists: artists.map({$0.toLocal()}), album: album?.toLocal())
+    }
+}
+// 专辑
+struct YuRemoteResponseAlbum: Codable{
+    var id: Int64           // id
+    var name: String        // 专辑名称
+    var picUrl: String?      // 专辑封面
+    func toLocal() -> YuAlbum{
+        YuAlbum(id: id, name: name, picUrl: picUrl)
+    }
+}
+// 歌手
 struct YuRemoteResponseArtist: Codable{
     var id: Int64           // id
     var name: String        // 姓名
     var picUrl: String?      // 封面
     var albumSize: Int64?    // 专辑数量
-    func toArtist() -> YuArtist{
-        YuArtist(id: id, name: name)
+    func toLocal() -> YuArtist{
+        YuArtist(id: id, name: name,picUrl: picUrl, albumSize: albumSize)
     }
 }
 
-struct YuRemoteResponseSong: Codable{
-    var id: Int64           // id
-    var name: String        // 歌曲名称
-    var artists: [YuRemoteResponseArtist]   // 歌手
-}
