@@ -31,8 +31,6 @@ class YuData: ObservableObject{
     @Published var emptyLyric: Bool = true  // 是否没有歌词
     @Published var playSeconds: Int = 0     // 播放进度
     
-    
-    
     // MARK: 界面状态相关
     @Published var viewType: YuViewType = .PLAYLIST
     
@@ -45,5 +43,4 @@ class YuData: ObservableObject{
     @Published var favorites: [YuSong] = (loadFavorite()){
         didSet { saveFavorite() }
     }
-
 }

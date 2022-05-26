@@ -8,10 +8,6 @@
 import Foundation
 import AVFoundation
 
-
-var decoder = JSONDecoder()
-var encoder = JSONEncoder()
-
 enum SearchType{
     case SONG(String,Int16)
     case ARTIST(String, Int16)

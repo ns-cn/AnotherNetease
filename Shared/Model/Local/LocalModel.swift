@@ -40,10 +40,14 @@ struct YuArtist: Codable{
     var id: Int64
     // 歌手名称
     var name: String
+    // 封面
+    var picUrl: String?
+    // 专辑数量
+    var albumSize: Int64?
 }
 
 // MARK: 歌曲资源
-struct YuSource: Identifiable, Codable, Hashable{
+struct YuSource: Identifiable, Codable{
     var id: UUID = UUID()
     var quality: String
     var url: String

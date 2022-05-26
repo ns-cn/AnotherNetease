@@ -67,6 +67,14 @@
 		62104EB7283DD987006D068C /* YuLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EB5283DD987006D068C /* YuLocalStorage.swift */; };
 		62104EB9283DDC5C006D068C /* YuPlayerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EB8283DDC5C006D068C /* YuPlayerControl.swift */; };
 		62104EBA283DDC5D006D068C /* YuPlayerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EB8283DDC5C006D068C /* YuPlayerControl.swift */; };
+		62104EBC283F5314006D068C /* YuRemoteSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EBB283F5314006D068C /* YuRemoteSearch.swift */; };
+		62104EBD283F5314006D068C /* YuRemoteSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EBB283F5314006D068C /* YuRemoteSearch.swift */; };
+		62104EBF283F5375006D068C /* YuRemoteSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EBE283F5375006D068C /* YuRemoteSong.swift */; };
+		62104EC0283F5375006D068C /* YuRemoteSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EBE283F5375006D068C /* YuRemoteSong.swift */; };
+		62104EC2283F6169006D068C /* YuRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EC1283F6169006D068C /* YuRemote.swift */; };
+		62104EC3283F6169006D068C /* YuRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EC1283F6169006D068C /* YuRemote.swift */; };
+		62104EC5283F76D6006D068C /* YuRemoteTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EC4283F76D6006D068C /* YuRemoteTop.swift */; };
+		62104EC6283F76D6006D068C /* YuRemoteTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62104EC4283F76D6006D068C /* YuRemoteTop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +113,10 @@
 		62104EB0283DD924006D068C /* LocalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalModel.swift; sourceTree = "<group>"; };
 		62104EB5283DD987006D068C /* YuLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuLocalStorage.swift; sourceTree = "<group>"; };
 		62104EB8283DDC5C006D068C /* YuPlayerControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuPlayerControl.swift; sourceTree = "<group>"; };
+		62104EBB283F5314006D068C /* YuRemoteSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuRemoteSearch.swift; sourceTree = "<group>"; };
+		62104EBE283F5375006D068C /* YuRemoteSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuRemoteSong.swift; sourceTree = "<group>"; };
+		62104EC1283F6169006D068C /* YuRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuRemote.swift; sourceTree = "<group>"; };
+		62104EC4283F76D6006D068C /* YuRemoteTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuRemoteTop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +278,10 @@
 		62104EB4283DD94F006D068C /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				62104EBB283F5314006D068C /* YuRemoteSearch.swift */,
+				62104EBE283F5375006D068C /* YuRemoteSong.swift */,
+				62104EC4283F76D6006D068C /* YuRemoteTop.swift */,
+				62104EC1283F6169006D068C /* YuRemote.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -370,9 +386,12 @@
 			files = (
 				62104E86283BC9FC006D068C /* DownloadView.swift in Sources */,
 				62104E72283BC9FC006D068C /* Playing.swift in Sources */,
+				62104EBF283F5375006D068C /* YuRemoteSong.swift in Sources */,
+				62104EC2283F6169006D068C /* YuRemote.swift in Sources */,
 				62104E78283BC9FC006D068C /* LeftPartView.swift in Sources */,
 				62104EA3283D2018006D068C /* YuSearchView.swift in Sources */,
 				62104EB1283DD924006D068C /* LocalModel.swift in Sources */,
+				62104EC5283F76D6006D068C /* YuRemoteTop.swift in Sources */,
 				62104E6C283BC9FC006D068C /* Top.swift in Sources */,
 				62104E7C283BC9FC006D068C /* Home.swift in Sources */,
 				62104E7E283BC9FC006D068C /* SearchView.swift in Sources */,
@@ -395,6 +414,7 @@
 				62104E7A283BC9FC006D068C /* PlayController.swift in Sources */,
 				62104E82283BC9FC006D068C /* WelcomeView.swift in Sources */,
 				62104EB9283DDC5C006D068C /* YuPlayerControl.swift in Sources */,
+				62104EBC283F5314006D068C /* YuRemoteSearch.swift in Sources */,
 				62104E8A283BC9FC006D068C /* SideBar.swift in Sources */,
 				62104E84283BC9FC006D068C /* TopArtistView.swift in Sources */,
 			);
@@ -406,9 +426,12 @@
 			files = (
 				62104E87283BC9FC006D068C /* DownloadView.swift in Sources */,
 				62104E73283BC9FC006D068C /* Playing.swift in Sources */,
+				62104EC0283F5375006D068C /* YuRemoteSong.swift in Sources */,
+				62104EC3283F6169006D068C /* YuRemote.swift in Sources */,
 				62104E79283BC9FC006D068C /* LeftPartView.swift in Sources */,
 				62104EA4283D2018006D068C /* YuSearchView.swift in Sources */,
 				62104EB2283DD924006D068C /* LocalModel.swift in Sources */,
+				62104EC6283F76D6006D068C /* YuRemoteTop.swift in Sources */,
 				62104E6D283BC9FC006D068C /* Top.swift in Sources */,
 				62104E7D283BC9FC006D068C /* Home.swift in Sources */,
 				62104E7F283BC9FC006D068C /* SearchView.swift in Sources */,
@@ -431,6 +454,7 @@
 				62104E7B283BC9FC006D068C /* PlayController.swift in Sources */,
 				62104E83283BC9FC006D068C /* WelcomeView.swift in Sources */,
 				62104EBA283DDC5D006D068C /* YuPlayerControl.swift in Sources */,
+				62104EBD283F5314006D068C /* YuRemoteSearch.swift in Sources */,
 				62104E8B283BC9FC006D068C /* SideBar.swift in Sources */,
 				62104E85283BC9FC006D068C /* TopArtistView.swift in Sources */,
 			);
